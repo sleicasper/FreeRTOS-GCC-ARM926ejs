@@ -60,4 +60,4 @@ fi
 QEMUBIN=qemu-system-arm
 #QEMUBIN=~/qemu/bin/qemu-system-arm
 
-$QEMUBIN -M versatilepb -nographic -m 128 -kernel $IMAGE_FILE $QEMU_GDB_ARG
+$QEMUBIN -M versatilepb -nographic -m 128  -monitor telnet:127.0.0.1:55551,server,nowait -kernel $IMAGE_FILE $QEMU_GDB_ARG
